@@ -2,29 +2,48 @@
 
 A minimal Django app for testing deployment. The home page displays one random dad joke from the database and links back to itself to show another joke.
 
+Repository: `git@github.com:delger/dad-jokes.git`
+
+## Requirements
+
+- Python 3.13 or newer
+- Poetry
+
 ## Local Setup
 
-Install dependencies with Poetry:
+Install dependencies:
 
 ```bash
 poetry install
 ```
 
-Or use `requirements.txt` with a virtual environment:
-
-```bash
-python -m pip install -r requirements.txt
-```
+This project uses Poetry for dependency management. The in-project virtual environment is configured in `poetry.toml`, so Poetry will create/use `.venv/`.
 
 ## Database
 
-Create and apply migrations:
+Local development uses SQLite by default at `db.sqlite3`.
+
+Create and apply local migrations:
 
 ```bash
 poetry run python manage.py migrate
 ```
 
-The `jokes` app includes a data migration that inserts three starter jokes. Jokes are stored in SQLite by default at `db.sqlite3`.
+The `jokes` app includes a data migration that inserts three starter jokes.
+
+## Production Database
+
+Production uses Postgres through `DATABASE_URL`. Create a Postgres database in CapRover, then set `DATABASE_URL` for the app:
+
+```bash
+DATABASE_URL=postgres://USER:PASSWORD:HOST:5432/DBNAME
+```
+
+Run migrations after `DATABASE_URL` is configured:
+
+```bash
+poetry run python manage.py migrate
+```
 
 ## Admin
 
@@ -49,7 +68,7 @@ Visit `http://127.0.0.1:8000/`.
 Collect static assets for production:
 
 ```bash
-poetry run python manage.py collectstatic
+poetry run python manage.py collectstatic --noinput
 ```
 
 WhiteNoise is configured to serve collected static files.
@@ -62,16 +81,29 @@ Set these environment variables in production:
 SECRET_KEY=replace-with-a-secure-secret
 DEBUG=False
 ALLOWED_HOSTS=example.com,www.example.com
+DATABASE_URL=postgres://USER:PASSWORD:HOST:5432/DBNAME
 ```
 
-`ALLOWED_HOSTS` is a comma-separated list. SQLite is configured initially; use a persistent disk or switch databases before deploying to a platform with ephemeral storage.
+`ALLOWED_HOSTS` is a comma-separated list. SQLite is only the local default; production should use Postgres.
+
+## Deployment Path
+
+1. Build locally.
+2. Dockerize the app.
+3. Deploy with CapRover.
+4. Attach the domain.
+5. Enable HTTPS.
 
 ## Deployment Checklist
 
-- Install dependencies from `requirements.txt` or Poetry.
-- Set `SECRET_KEY`, `DEBUG=False`, and `ALLOWED_HOSTS`.
-- Run `python manage.py migrate`.
-- Run `python manage.py collectstatic --noinput`.
+- Confirm the app runs locally with `poetry run python manage.py runserver`.
+- Build and test the Docker image locally.
+- Create or attach a Postgres database in CapRover.
+- Set production environment variables in CapRover: `SECRET_KEY`, `DEBUG=False`, `ALLOWED_HOSTS`, and `DATABASE_URL`.
+- Deploy the app through CapRover.
+- Run migrations after deploy: `poetry run python manage.py migrate`.
+- Collect static files for production: `poetry run python manage.py collectstatic --noinput`.
 - Create a superuser if admin access is needed.
-- Start the app with a WSGI server pointed at `dad_jokes_project.wsgi:application`.
-- Confirm `/`, `/admin/`, and static CSS load correctly.
+- Attach the custom domain in CapRover.
+- Enable HTTPS in CapRover.
+- Confirm `/`, `/admin/`, and static CSS load correctly over HTTPS.
