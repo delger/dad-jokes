@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dad Jokes</title>
+    <link rel="stylesheet" href="{% static 'jokes/styles.css' %}">
+</head>
+<body>
+    <main class="page">
+        <h1>Dad Jokes</h1>
+
+        {% if joke %}
+            <p class="joke">{{ joke.text }}</p>
+        {% else %}
+            <p class="joke">No jokes are in the database yet.</p>
+        {% endif %}
+
+        <a class="button" href="{% url 'jokes:home' %}">Another joke</a>
+    </main>
+
+    <footer>Built to test Django deployment.</footer>
+</body>
+</html>
