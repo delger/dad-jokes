@@ -73,6 +73,26 @@ poetry run python manage.py collectstatic --noinput
 
 WhiteNoise is configured to serve collected static files.
 
+## Docker
+
+Build the image locally:
+
+```bash
+docker build -t dad-jokes .
+```
+
+Run the container locally:
+
+```bash
+docker run --rm -p 8000:80 \
+  -e SECRET_KEY=dev-test-secret \
+  -e DEBUG=False \
+  -e ALLOWED_HOSTS=localhost,127.0.0.1 \
+  dad-jokes
+```
+
+The container runs migrations, collects static files, and starts Gunicorn on port `80`.
+
 ## Production Environment Variables
 
 Set these environment variables in production:
@@ -100,9 +120,8 @@ DATABASE_URL=postgres://USER:PASSWORD:HOST:5432/DBNAME
 - Build and test the Docker image locally.
 - Create or attach a Postgres database in CapRover.
 - Set production environment variables in CapRover: `SECRET_KEY`, `DEBUG=False`, `ALLOWED_HOSTS`, and `DATABASE_URL`.
-- Deploy the app through CapRover.
-- Run migrations after deploy: `poetry run python manage.py migrate`.
-- Collect static files for production: `poetry run python manage.py collectstatic --noinput`.
+- Deploy the app through CapRover using `captain-definition`.
+- Confirm the container startup runs migrations and collects static files.
 - Create a superuser if admin access is needed.
 - Attach the custom domain in CapRover.
 - Enable HTTPS in CapRover.
