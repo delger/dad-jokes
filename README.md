@@ -106,22 +106,51 @@ DATABASE_URL=postgres://USER:PASSWORD:HOST:5432/DBNAME
 
 `ALLOWED_HOSTS` is a comma-separated list. SQLite is only the local default; production should use Postgres.
 
+## Joke Data Source of Truth
+
+The local SQLite database is the source of truth for joke data. Production receives a published snapshot from `fixtures/jokes.json`.
+
+After adding, editing, or deleting jokes locally, export the current joke data:
+
+```bash
+./scripts/export-jokes.sh
+```
+
+This writes `fixtures/jokes.json` from the local database and runs a dry-run sync check.
+
+During Docker/container startup, `entrypoint.sh` runs migrations and then syncs production jokes from `fixtures/jokes.json` when the fixture exists. The sync creates missing jokes and deletes production jokes that are not in the fixture, so production matches the local source-of-truth snapshot.
+
+To disable automatic fixture sync for a deployment:
+
+```bash
+SYNC_JOKES_FROM_FIXTURE=false
+```
+
+To use a different fixture path:
+
+```bash
+JOKES_FIXTURE=fixtures/other-jokes.json
+```
+
 ## Deployment Path
 
-1. Build locally.
-2. Dockerize the app.
-3. Deploy with CapRover.
-4. Attach the domain.
-5. Enable HTTPS.
+1. Add or edit jokes locally.
+2. Export joke data with `./scripts/export-jokes.sh`.
+3. Build locally.
+4. Dockerize the app.
+5. Deploy with CapRover.
+6. Attach the domain.
+7. Enable HTTPS.
 
 ## Deployment Checklist
 
 - Confirm the app runs locally with `poetry run python manage.py runserver`.
+- Export local joke data with `./scripts/export-jokes.sh`.
 - Build and test the Docker image locally.
 - Create or attach a Postgres database in CapRover.
 - Set production environment variables in CapRover: `SECRET_KEY`, `DEBUG=False`, `ALLOWED_HOSTS`, and `DATABASE_URL`.
 - Deploy the app through CapRover using `captain-definition`.
-- Confirm the container startup runs migrations and collects static files.
+- Confirm the container startup runs migrations, syncs jokes from `fixtures/jokes.json`, and collects static files.
 - Create a superuser if admin access is needed.
 - Attach the custom domain in CapRover.
 - Enable HTTPS in CapRover.
