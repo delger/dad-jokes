@@ -63,6 +63,16 @@ poetry run python manage.py runserver
 
 Visit `http://127.0.0.1:8000/`.
 
+## Tests
+
+Run the test suite:
+
+```bash
+poetry run python manage.py test
+```
+
+Tests cover the home page, admin redirect, model behavior, production static-file settings, and joke fixture sync automation.
+
 ## Static Files
 
 Collect static assets for production:
@@ -91,7 +101,7 @@ docker run --rm -p 8000:80 \
   dad-jokes
 ```
 
-The container runs migrations, collects static files, and starts Gunicorn on port `80`.
+The container runs migrations, syncs jokes from `fixtures/jokes.json` when present, collects static files, and starts Gunicorn on port `80`.
 
 ## Production Environment Variables
 
