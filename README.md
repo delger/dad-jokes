@@ -1,6 +1,6 @@
 # Dad Jokes
 
-A minimal Django app for testing deployment. The home page displays one random dad joke from the database and links back to itself to show another joke.
+A minimal Django app for testing deployment. The home page displays one random dad joke prompt from the database, reveals the punchline when present, and links back to itself to show another joke.
 
 Repository: `git@github.com:delger/dad-jokes.git`
 
@@ -21,7 +21,17 @@ This project uses Poetry for dependency management. The in-project virtual envir
 
 ## Database
 
-Local development uses SQLite by default at `db.sqlite3`.
+Local development uses Postgres by default:
+
+```bash
+postgres://donaldelger@localhost:5432/dad_jokes
+```
+
+If the database does not exist yet, create it:
+
+```bash
+createdb -h localhost -p 5432 dad_jokes
+```
 
 Create and apply local migrations:
 
@@ -36,7 +46,7 @@ The `jokes` app includes a data migration that inserts three starter jokes.
 Production uses Postgres through `DATABASE_URL`. Create a Postgres database in CapRover, then set `DATABASE_URL` for the app:
 
 ```bash
-DATABASE_URL=postgres://USER:PASSWORD:HOST:5432/DBNAME
+DATABASE_URL=postgres://USER:PASSWORD@HOST:5432/DBNAME
 ```
 
 Run migrations after `DATABASE_URL` is configured:
@@ -98,6 +108,7 @@ docker run --rm -p 8000:80 \
   -e SECRET_KEY=dev-test-secret \
   -e DEBUG=False \
   -e ALLOWED_HOSTS=localhost,127.0.0.1 \
+  -e DATABASE_URL=postgres://USER:PASSWORD@HOST:5432/DBNAME \
   dad-jokes
 ```
 
@@ -111,14 +122,14 @@ Set these environment variables in production:
 SECRET_KEY=replace-with-a-secure-secret
 DEBUG=False
 ALLOWED_HOSTS=example.com,www.example.com
-DATABASE_URL=postgres://USER:PASSWORD:HOST:5432/DBNAME
+DATABASE_URL=postgres://USER:PASSWORD@HOST:5432/DBNAME
 ```
 
-`ALLOWED_HOSTS` is a comma-separated list. SQLite is only the local default; production should use Postgres.
+`ALLOWED_HOSTS` is a comma-separated list. Production should set `DATABASE_URL` to the production Postgres database.
 
 ## Joke Data Source of Truth
 
-The local SQLite database is the source of truth for joke data. Production receives a published snapshot from `fixtures/jokes.json`.
+The local Postgres database is the source of truth for joke data. Production receives a published snapshot from `fixtures/jokes.json`.
 
 After adding, editing, or deleting jokes locally, export the current joke data:
 
