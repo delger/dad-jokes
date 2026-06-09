@@ -12,7 +12,13 @@
         <h1>Dad Jokes</h1>
 
         {% if joke %}
-            <p class="joke">{{ joke.text }}</p>
+            <p class="joke prompt">{{ joke.prompt }}</p>
+            {% if joke.response %}
+                <details class="punchline">
+                    <summary>Show punchline</summary>
+                    <p class="joke response">{{ joke.response }}</p>
+                </details>
+            {% endif %}
         {% else %}
             <p class="joke">No jokes are in the database yet.</p>
         {% endif %}

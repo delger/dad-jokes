@@ -3,7 +3,8 @@
   "model": "jokes.joke",
   "pk": 1,
   "fields": {
-    "text": "I only know 25 letters of the alphabet. I don't know y.",
+    "prompt": "I only know 25 letters of the alphabet. I don't know y.",
+    "response": "",
     "created_at": "2026-05-28T16:22:23.508Z"
   }
 },
@@ -11,7 +12,8 @@
   "model": "jokes.joke",
   "pk": 2,
   "fields": {
-    "text": "Why did the scarecrow win an award? Because he was outstanding in his field.",
+    "prompt": "Why did the scarecrow win an award?",
+    "response": "Because he was outstanding in his field.",
     "created_at": "2026-05-28T16:22:23.508Z"
   }
 },
@@ -19,7 +21,8 @@
   "model": "jokes.joke",
   "pk": 3,
   "fields": {
-    "text": "What do you call fake spaghetti? An impasta.",
+    "prompt": "What do you call fake spaghetti?",
+    "response": "An impasta.",
     "created_at": "2026-05-28T16:22:23.508Z"
   }
 },
@@ -27,7 +30,8 @@
   "model": "jokes.joke",
   "pk": 4,
   "fields": {
-    "text": "I used to be addicted to soap, but I am clean now.",
+    "prompt": "I used to be addicted to soap, but I am clean now.",
+    "response": "",
     "created_at": "2026-05-28T16:29:29.820Z"
   }
 },
@@ -35,7 +39,8 @@
   "model": "jokes.joke",
   "pk": 5,
   "fields": {
-    "text": "I asked my dog what two minus two is. He said nothing.",
+    "prompt": "I asked my dog what two minus two is. He said nothing.",
+    "response": "",
     "created_at": "2026-05-28T16:29:29.822Z"
   }
 },
@@ -43,7 +48,8 @@
   "model": "jokes.joke",
   "pk": 6,
   "fields": {
-    "text": "I would tell you a construction joke, but I am still working on it.",
+    "prompt": "I would tell you a construction joke, but I am still working on it.",
+    "response": "",
     "created_at": "2026-05-28T16:29:29.823Z"
   }
 },
@@ -51,7 +57,8 @@
   "model": "jokes.joke",
   "pk": 7,
   "fields": {
-    "text": "I used to hate facial hair, but then it grew on me.",
+    "prompt": "I used to hate facial hair, but then it grew on me.",
+    "response": "",
     "created_at": "2026-05-28T16:29:29.824Z"
   }
 },
@@ -59,7 +66,8 @@
   "model": "jokes.joke",
   "pk": 8,
   "fields": {
-    "text": "I am reading a book about anti-gravity. It is impossible to put down.",
+    "prompt": "I am reading a book about anti-gravity. It is impossible to put down.",
+    "response": "",
     "created_at": "2026-05-28T16:29:29.825Z"
   }
 },
@@ -67,7 +75,8 @@
   "model": "jokes.joke",
   "pk": 9,
   "fields": {
-    "text": "Why do fathers take an extra pair of socks golfing? In case they get a hole in one.",
+    "prompt": "Why do fathers take an extra pair of socks golfing?",
+    "response": "In case they get a hole in one.",
     "created_at": "2026-05-28T16:29:29.826Z"
   }
 },
@@ -75,7 +84,8 @@
   "model": "jokes.joke",
   "pk": 10,
   "fields": {
-    "text": "I ordered a chicken and an egg online. I will let you know which comes first.",
+    "prompt": "I ordered a chicken and an egg online. I will let you know which comes first.",
+    "response": "",
     "created_at": "2026-05-28T16:29:29.827Z"
   }
 },
@@ -83,7 +93,8 @@
   "model": "jokes.joke",
   "pk": 11,
   "fields": {
-    "text": "Why did the math book look sad? It had too many problems.",
+    "prompt": "Why did the math book look sad?",
+    "response": "It had too many problems.",
     "created_at": "2026-05-28T16:29:29.828Z"
   }
 },
@@ -91,7 +102,8 @@
   "model": "jokes.joke",
   "pk": 12,
   "fields": {
-    "text": "I do not trust stairs. They are always up to something.",
+    "prompt": "I do not trust stairs. They are always up to something.",
+    "response": "",
     "created_at": "2026-05-28T16:29:29.829Z"
   }
 },
@@ -99,7 +111,8 @@
   "model": "jokes.joke",
   "pk": 13,
   "fields": {
-    "text": "What did one wall say to the other wall? I will meet you at the corner.",
+    "prompt": "What did one wall say to the other wall?",
+    "response": "I will meet you at the corner.",
     "created_at": "2026-05-28T16:29:29.830Z"
   }
 },
@@ -107,7 +120,8 @@
   "model": "jokes.joke",
   "pk": 14,
   "fields": {
-    "text": "I told my wife she should embrace her mistakes. She gave me a hug.",
+    "prompt": "I told my wife she should embrace her mistakes. She gave me a hug.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.853Z"
   }
 },
@@ -115,7 +129,8 @@
   "model": "jokes.joke",
   "pk": 15,
   "fields": {
-    "text": "Why did the bicycle fall over? It was two tired.",
+    "prompt": "Why did the bicycle fall over?",
+    "response": "It was two tired.",
     "created_at": "2026-05-28T16:31:21.854Z"
   }
 },
@@ -123,7 +138,8 @@
   "model": "jokes.joke",
   "pk": 16,
   "fields": {
-    "text": "I only seem to get sick on weekdays. I must have a weekend immune system.",
+    "prompt": "I only seem to get sick on weekdays. I must have a weekend immune system.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.854Z"
   }
 },
@@ -131,7 +147,8 @@
   "model": "jokes.joke",
   "pk": 17,
   "fields": {
-    "text": "What do you call cheese that is not yours? Nacho cheese.",
+    "prompt": "What do you call cheese that is not yours?",
+    "response": "Nacho cheese.",
     "created_at": "2026-05-28T16:31:21.855Z"
   }
 },
@@ -139,7 +156,8 @@
   "model": "jokes.joke",
   "pk": 18,
   "fields": {
-    "text": "Why cannot a nose be twelve inches long? Because then it would be a foot.",
+    "prompt": "Why cannot a nose be twelve inches long?",
+    "response": "Because then it would be a foot.",
     "created_at": "2026-05-28T16:31:21.856Z"
   }
 },
@@ -147,7 +165,8 @@
   "model": "jokes.joke",
   "pk": 19,
   "fields": {
-    "text": "I made a pencil with two erasers. It was pointless.",
+    "prompt": "I made a pencil with two erasers. It was pointless.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.856Z"
   }
 },
@@ -155,7 +174,8 @@
   "model": "jokes.joke",
   "pk": 20,
   "fields": {
-    "text": "Why did the coffee file a police report? It got mugged.",
+    "prompt": "Why did the coffee file a police report?",
+    "response": "It got mugged.",
     "created_at": "2026-05-28T16:31:21.858Z"
   }
 },
@@ -163,7 +183,8 @@
   "model": "jokes.joke",
   "pk": 21,
   "fields": {
-    "text": "I used to run a dating service for chickens, but I was struggling to make hens meet.",
+    "prompt": "I used to run a dating service for chickens, but I was struggling to make hens meet.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.859Z"
   }
 },
@@ -171,7 +192,8 @@
   "model": "jokes.joke",
   "pk": 22,
   "fields": {
-    "text": "Why did the tomato turn red? Because it saw the salad dressing.",
+    "prompt": "Why did the tomato turn red?",
+    "response": "Because it saw the salad dressing.",
     "created_at": "2026-05-28T16:31:21.860Z"
   }
 },
@@ -179,7 +201,8 @@
   "model": "jokes.joke",
   "pk": 23,
   "fields": {
-    "text": "I have a joke about paper, but it is tearable.",
+    "prompt": "I have a joke about paper, but it is tearable.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.861Z"
   }
 },
@@ -187,7 +210,8 @@
   "model": "jokes.joke",
   "pk": 24,
   "fields": {
-    "text": "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+    "prompt": "Why did the golfer bring two pairs of pants?",
+    "response": "In case he got a hole in one.",
     "created_at": "2026-05-28T16:31:21.861Z"
   }
 },
@@ -195,7 +219,8 @@
   "model": "jokes.joke",
   "pk": 25,
   "fields": {
-    "text": "I am friends with all electricians. We have good current connections.",
+    "prompt": "I am friends with all electricians. We have good current connections.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.862Z"
   }
 },
@@ -203,7 +228,8 @@
   "model": "jokes.joke",
   "pk": 26,
   "fields": {
-    "text": "What do you call a factory that makes okay products? A satisfactory.",
+    "prompt": "What do you call a factory that makes okay products?",
+    "response": "A satisfactory.",
     "created_at": "2026-05-28T16:31:21.863Z"
   }
 },
@@ -211,7 +237,8 @@
   "model": "jokes.joke",
   "pk": 27,
   "fields": {
-    "text": "I tried to catch fog yesterday. I mist.",
+    "prompt": "I tried to catch fog yesterday. I mist.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.863Z"
   }
 },
@@ -219,7 +246,8 @@
   "model": "jokes.joke",
   "pk": 28,
   "fields": {
-    "text": "Why do bees have sticky hair? Because they use honeycombs.",
+    "prompt": "Why do bees have sticky hair?",
+    "response": "Because they use honeycombs.",
     "created_at": "2026-05-28T16:31:21.864Z"
   }
 },
@@ -227,7 +255,8 @@
   "model": "jokes.joke",
   "pk": 29,
   "fields": {
-    "text": "I bought a ceiling fan the other day. Complete waste of money. He just stands there applauding and saying he loves ceilings.",
+    "prompt": "I bought a ceiling fan the other day. Complete waste of money. He just stands there applauding and saying he loves ceilings.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.864Z"
   }
 },
@@ -235,7 +264,8 @@
   "model": "jokes.joke",
   "pk": 30,
   "fields": {
-    "text": "What do you call a fish wearing a bowtie? Sofishticated.",
+    "prompt": "What do you call a fish wearing a bowtie?",
+    "response": "Sofishticated.",
     "created_at": "2026-05-28T16:31:21.865Z"
   }
 },
@@ -243,7 +273,8 @@
   "model": "jokes.joke",
   "pk": 31,
   "fields": {
-    "text": "I used to be a baker, but I could not make enough dough.",
+    "prompt": "I used to be a baker, but I could not make enough dough.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.866Z"
   }
 },
@@ -251,7 +282,8 @@
   "model": "jokes.joke",
   "pk": 32,
   "fields": {
-    "text": "Why did the cookie go to the doctor? It felt crummy.",
+    "prompt": "Why did the cookie go to the doctor?",
+    "response": "It felt crummy.",
     "created_at": "2026-05-28T16:31:21.866Z"
   }
 },
@@ -259,7 +291,8 @@
   "model": "jokes.joke",
   "pk": 33,
   "fields": {
-    "text": "I do not play soccer because I enjoy the sport. I am just doing it for kicks.",
+    "prompt": "I do not play soccer because I enjoy the sport. I am just doing it for kicks.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.867Z"
   }
 },
@@ -267,7 +300,8 @@
   "model": "jokes.joke",
   "pk": 34,
   "fields": {
-    "text": "What do you call an alligator in a vest? An investigator.",
+    "prompt": "What do you call an alligator in a vest?",
+    "response": "An investigator.",
     "created_at": "2026-05-28T16:31:21.868Z"
   }
 },
@@ -275,7 +309,8 @@
   "model": "jokes.joke",
   "pk": 35,
   "fields": {
-    "text": "Why did the computer go to the doctor? It had a virus.",
+    "prompt": "Why did the computer go to the doctor?",
+    "response": "It had a virus.",
     "created_at": "2026-05-28T16:31:21.868Z"
   }
 },
@@ -283,7 +318,8 @@
   "model": "jokes.joke",
   "pk": 36,
   "fields": {
-    "text": "I would tell you a joke about time travel, but you did not like it.",
+    "prompt": "I would tell you a joke about time travel, but you did not like it.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.869Z"
   }
 },
@@ -291,7 +327,8 @@
   "model": "jokes.joke",
   "pk": 37,
   "fields": {
-    "text": "Why did the stadium get hot after the game? All the fans left.",
+    "prompt": "Why did the stadium get hot after the game?",
+    "response": "All the fans left.",
     "created_at": "2026-05-28T16:31:21.869Z"
   }
 },
@@ -299,7 +336,8 @@
   "model": "jokes.joke",
   "pk": 38,
   "fields": {
-    "text": "I asked my calendar why it was so popular. It said its days were numbered.",
+    "prompt": "I asked my calendar why it was so popular. It said its days were numbered.",
+    "response": "",
     "created_at": "2026-05-28T16:31:21.870Z"
   }
 }

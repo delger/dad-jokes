@@ -21,24 +21,30 @@ class SyncJokesFixtureTests(TestCase):
     def tearDown(self):
         self.temp_dir.cleanup()
 
-    def write_fixture(self, texts):
+    def write_fixture(self, jokes):
         objects = [
             {
                 "model": "jokes.joke",
                 "pk": index,
                 "fields": {
-                    "text": text,
+                    "prompt": prompt,
+                    "response": response,
                     "created_at": "2026-01-01T00:00:00Z",
                 },
             }
-            for index, text in enumerate(texts, start=1)
+            for index, (prompt, response) in enumerate(jokes, start=1)
         ]
         self.fixture_path.write_text(json.dumps(objects), encoding="utf-8")
 
     def test_sync_creates_missing_and_deletes_stale_jokes(self):
-        Joke.objects.create(text="stale joke")
-        Joke.objects.create(text="existing joke")
-        self.write_fixture(["existing joke", "new joke"])
+        Joke.objects.create(prompt="stale joke")
+        Joke.objects.create(prompt="existing joke", response="old response")
+        self.write_fixture(
+            [
+                ("existing joke", "old response"),
+                ("new joke", "new response"),
+            ]
+        )
 
         with override_settings(BASE_DIR=self.base_dir):
             call_command(
@@ -48,12 +54,12 @@ class SyncJokesFixtureTests(TestCase):
             )
 
         self.assertEqual(
-            list(Joke.objects.order_by("text").values_list("text", flat=True)),
-            ["existing joke", "new joke"],
+            list(Joke.objects.order_by("prompt").values_list("prompt", "response")),
+            [("existing joke", "old response"), ("new joke", "new response")],
         )
 
-    def test_duplicate_fixture_text_raises_error(self):
-        self.write_fixture(["same joke", "same joke"])
+    def test_duplicate_fixture_joke_raises_error(self):
+        self.write_fixture([("same joke", ""), ("same joke", "")])
 
         with override_settings(BASE_DIR=self.base_dir), self.assertRaises(CommandError):
             call_command("sync_jokes_fixture", fixture="fixtures/jokes.json")

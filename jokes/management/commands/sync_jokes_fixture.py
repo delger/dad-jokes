@@ -31,12 +31,12 @@ class Command(BaseCommand):
         if not fixture_path.exists():
             raise CommandError(f"Fixture not found: {fixture_path}")
 
-        fixture_texts = self._load_fixture_texts(fixture_path)
-        existing_texts = set(Joke.objects.values_list("text", flat=True))
-        desired_texts = set(fixture_texts)
+        fixture_jokes = self._load_fixture_jokes(fixture_path)
+        existing_jokes = set(Joke.objects.values_list("prompt", "response"))
+        desired_jokes = set(fixture_jokes)
 
-        to_create = sorted(desired_texts - existing_texts)
-        to_delete = sorted(existing_texts - desired_texts)
+        to_create = sorted(desired_jokes - existing_jokes)
+        to_delete = sorted(existing_jokes - desired_jokes)
 
         if options["dry_run"]:
             self.stdout.write(
@@ -46,18 +46,22 @@ class Command(BaseCommand):
 
         with transaction.atomic():
             if to_delete:
-                Joke.objects.filter(text__in=to_delete).delete()
-            Joke.objects.bulk_create(Joke(text=text) for text in to_create)
+                for prompt, response in to_delete:
+                    Joke.objects.filter(prompt=prompt, response=response).delete()
+            Joke.objects.bulk_create(
+                Joke(prompt=prompt, response=response)
+                for prompt, response in to_create
+            )
 
         self.stdout.write(
             self.style.SUCCESS(
                 f"Synced jokes from {fixture_path}: "
                 f"{len(to_create)} created, {len(to_delete)} deleted, "
-                f"{len(desired_texts)} total."
+                f"{len(desired_jokes)} total."
             )
         )
 
-    def _load_fixture_texts(self, fixture_path):
+    def _load_fixture_jokes(self, fixture_path):
         try:
             with fixture_path.open(encoding="utf-8") as fixture_file:
                 objects = json.load(fixture_file)
@@ -67,7 +71,7 @@ class Command(BaseCommand):
         if not isinstance(objects, list):
             raise CommandError("Fixture must contain a list of objects.")
 
-        texts = []
+        jokes = []
         for index, item in enumerate(objects):
             if not isinstance(item, dict):
                 raise CommandError(f"Fixture item {index} must be an object.")
@@ -75,17 +79,18 @@ class Command(BaseCommand):
                 continue
 
             fields = item.get("fields")
-            if not isinstance(fields, dict) or not fields.get("text"):
-                raise CommandError(f"Fixture item {index} is missing fields.text.")
-            texts.append(fields["text"])
+            if not isinstance(fields, dict) or not fields.get("prompt"):
+                raise CommandError(f"Fixture item {index} is missing fields.prompt.")
+            jokes.append((fields["prompt"], fields.get("response", "")))
 
-        if not texts:
+        if not jokes:
             raise CommandError("Fixture contains no jokes.joke records.")
 
-        duplicates = sorted({text for text in texts if texts.count(text) > 1})
+        duplicates = sorted({joke for joke in jokes if jokes.count(joke) > 1})
         if duplicates:
             raise CommandError(
-                "Fixture contains duplicate joke text: " + "; ".join(duplicates)
+                "Fixture contains duplicate jokes: "
+                + "; ".join(prompt for prompt, response in duplicates)
             )
 
-        return texts
+        return jokes

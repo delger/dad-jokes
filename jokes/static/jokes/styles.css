@@ -34,6 +34,20 @@ h1 {
     line-height: 1.5;
 }
 
+.punchline {
+    font-size: 1rem;
+}
+
+.punchline summary {
+    cursor: pointer;
+    color: #1f6feb;
+    font-weight: 700;
+}
+
+.response {
+    margin-top: 0.75rem;
+}
+
 .button {
     display: inline-block;
     padding: 0.75rem 1rem;
