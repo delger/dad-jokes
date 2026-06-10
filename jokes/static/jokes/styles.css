@@ -63,8 +63,10 @@ h1 {
     background: #174ea6;
 }
 
-footer {
+.site-footer {
     padding: 1rem;
+    border-top: 1px solid #d8dee8;
     color: #57606a;
+    font-size: 0.9rem;
     text-align: center;
 }
