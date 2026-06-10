@@ -60,6 +60,44 @@ class HomePageTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "No jokes are in the database yet.")
+        self.assertNotIn("recent_joke_ids", self.client.session)
+
+    def test_home_page_does_not_repeat_recent_jokes_until_all_have_been_seen(self):
+        jokes = [
+            Joke.objects.create(prompt="First joke."),
+            Joke.objects.create(prompt="Second joke."),
+            Joke.objects.create(prompt="Third joke."),
+        ]
+
+        seen_joke_ids = []
+        for _ in jokes:
+            response = self.client.get(reverse("jokes:home"))
+
+            self.assertEqual(response.status_code, 200)
+            seen_joke_ids.append(response.context["joke"].id)
+
+        self.assertCountEqual(seen_joke_ids, [joke.id for joke in jokes])
+
+    def test_home_page_resets_recent_jokes_after_all_jokes_have_been_seen(self):
+        joke = Joke.objects.create(prompt="Only joke.")
+
+        first_response = self.client.get(reverse("jokes:home"))
+        second_response = self.client.get(reverse("jokes:home"))
+
+        self.assertEqual(first_response.context["joke"], joke)
+        self.assertEqual(second_response.context["joke"], joke)
+        self.assertEqual(self.client.session["recent_joke_ids"], [joke.id])
+
+    def test_recent_joke_history_is_limited(self):
+        jokes = [
+            Joke.objects.create(prompt=f"Joke {index}.")
+            for index in range(25)
+        ]
+
+        for _ in jokes:
+            self.client.get(reverse("jokes:home"))
+
+        self.assertEqual(len(self.client.session["recent_joke_ids"]), 20)
 
     def test_admin_redirects_anonymous_user_to_login(self):
         response = self.client.get("/admin/")
