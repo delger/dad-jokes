@@ -336,8 +336,8 @@
   "model": "jokes.joke",
   "pk": 38,
   "fields": {
-    "prompt": "I asked my calendar why it was so popular. It said its days were numbered.",
-    "response": "",
+    "prompt": "Why was the calendar sad?",
+    "response": "Its days were numbered.",
     "created_at": "2026-05-28T16:31:21.870Z"
   }
 },
@@ -1589,6 +1589,681 @@
   "fields": {
     "prompt": "When does a joke turn into a dad joke?",
     "response": "When it becomes apparent.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 178,
+  "fields": {
+    "prompt": "Why did the lemon stop rolling down the hill?",
+    "response": "It ran out of zest.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 179,
+  "fields": {
+    "prompt": "I tried to make a joke about gardening, but it needed more thyme.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 180,
+  "fields": {
+    "prompt": "Why did the melon have a big wedding?",
+    "response": "Because it cantaloupe.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 181,
+  "fields": {
+    "prompt": "I was going to tell a joke about sodium, but then I thought, Na.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 182,
+  "fields": {
+    "prompt": "Why did the baker stop making donuts?",
+    "response": "He was tired of the hole thing.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 183,
+  "fields": {
+    "prompt": "I tried to catch a squirrel, but it was too nutty for me.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 184,
+  "fields": {
+    "prompt": "Why did the candle study hard?",
+    "response": "It wanted to be brighter.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 185,
+  "fields": {
+    "prompt": "My friend opened a bakery for dogs.",
+    "response": "Business is ruff, but the treats are fetching.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 186,
+  "fields": {
+    "prompt": "Why did the blanket go to school?",
+    "response": "It wanted to cover more subjects.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 187,
+  "fields": {
+    "prompt": "I got fired from the calendar factory for taking too many dates.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 188,
+  "fields": {
+    "prompt": "Why did the elevator break up with the escalator?",
+    "response": "It needed some space to rise above things.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 189,
+  "fields": {
+    "prompt": "I tried to make a joke about mountains, but it was all downhill from there.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 190,
+  "fields": {
+    "prompt": "Why did the notebook look nervous?",
+    "response": "It had too many pending notes.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 191,
+  "fields": {
+    "prompt": "I bought a new pair of shoes from a magician.",
+    "response": "I do not know how he laced them, but they disappeared fast.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 192,
+  "fields": {
+    "prompt": "Why did the toaster get promoted?",
+    "response": "It kept popping up with good ideas.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 193,
+  "fields": {
+    "prompt": "I asked my laundry how it felt.",
+    "response": "It said it was feeling pressed.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 194,
+  "fields": {
+    "prompt": "Why did the banana start a band?",
+    "response": "It had great appeal.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 195,
+  "fields": {
+    "prompt": "I used to be a gardener, but I could not find my roots.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 196,
+  "fields": {
+    "prompt": "Why did the book join the police?",
+    "response": "It wanted to go undercover.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 197,
+  "fields": {
+    "prompt": "I told a joke about a train, but it got derailed.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 198,
+  "fields": {
+    "prompt": "Why did the onion win the talent show?",
+    "response": "It brought everyone to tears.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 199,
+  "fields": {
+    "prompt": "I tried to make a joke about Velcro, but it was a rip-off.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 200,
+  "fields": {
+    "prompt": "Why did the robot go on vacation?",
+    "response": "It needed to recharge.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 201,
+  "fields": {
+    "prompt": "My pencil sharpener and I broke up.",
+    "response": "It was always making a point.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 202,
+  "fields": {
+    "prompt": "Why did the bicycle apply for a job?",
+    "response": "It was tired of standing around.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 203,
+  "fields": {
+    "prompt": "I started a company selling yachts in my attic.",
+    "response": "Sails are going through the roof.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 204,
+  "fields": {
+    "prompt": "Why did the garlic get invited everywhere?",
+    "response": "It had a strong presence.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 205,
+  "fields": {
+    "prompt": "I tried to make a joke about recycling, but it was reused material.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 206,
+  "fields": {
+    "prompt": "Why did the radio go to therapy?",
+    "response": "It had too much static in its life.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 207,
+  "fields": {
+    "prompt": "I asked a carpenter for a joke.",
+    "response": "He nailed it.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 208,
+  "fields": {
+    "prompt": "Why did the pencil case feel organized?",
+    "response": "It had everything in line.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 209,
+  "fields": {
+    "prompt": "I tried to make a joke about soap bubbles, but it burst too soon.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 210,
+  "fields": {
+    "prompt": "Why did the freezer win an award?",
+    "response": "It was outstanding in its chill.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 211,
+  "fields": {
+    "prompt": "I joined a band of accountants.",
+    "response": "We are great at keeping time.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 212,
+  "fields": {
+    "prompt": "Why did the laptop go camping?",
+    "response": "It wanted to connect with nature.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 213,
+  "fields": {
+    "prompt": "I tried to write a joke about circles, but it kept going around.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 214,
+  "fields": {
+    "prompt": "Why did the fork start exercising?",
+    "response": "It wanted to be in tine shape.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 215,
+  "fields": {
+    "prompt": "I got a job polishing mirrors.",
+    "response": "It is something I can really see myself doing.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 216,
+  "fields": {
+    "prompt": "Why did the calendar feel cold?",
+    "response": "Its days were numbered and December was coming.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 217,
+  "fields": {
+    "prompt": "I tried to build a house out of spaghetti.",
+    "response": "It was a pasta-trophy.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 218,
+  "fields": {
+    "prompt": "Why did the tea bag go to school?",
+    "response": "It wanted to be steeped in knowledge.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 219,
+  "fields": {
+    "prompt": "I told a joke about a bridge, but it did not span out.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 220,
+  "fields": {
+    "prompt": "Why did the snowman check his bank account?",
+    "response": "He wanted to see if his assets were frozen.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 221,
+  "fields": {
+    "prompt": "I tried to make a joke about a closet, but it stayed shut.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 222,
+  "fields": {
+    "prompt": "Why did the stapler take a vacation?",
+    "response": "It needed to detach for a while.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 223,
+  "fields": {
+    "prompt": "I signed up for a marathon in a bakery.",
+    "response": "It was a long roll.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 224,
+  "fields": {
+    "prompt": "Why did the soap go to college?",
+    "response": "It wanted a clean degree.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 225,
+  "fields": {
+    "prompt": "I tried to make a joke about stairs, but it escalated quickly.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 226,
+  "fields": {
+    "prompt": "Why did the coffee bean stay home?",
+    "response": "It was grounded.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 227,
+  "fields": {
+    "prompt": "I asked the clock for advice.",
+    "response": "It told me to give it a second.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 228,
+  "fields": {
+    "prompt": "Why did the bread go to the doctor?",
+    "response": "It was feeling crumby.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 229,
+  "fields": {
+    "prompt": "I bought a new broom.",
+    "response": "It is sweeping me off my feet.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 230,
+  "fields": {
+    "prompt": "Why did the spreadsheet get nervous?",
+    "response": "It had too many cells to manage.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 231,
+  "fields": {
+    "prompt": "I tried to make a joke about a fan, but it blew away.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 232,
+  "fields": {
+    "prompt": "Why did the sink feel popular?",
+    "response": "Everyone kept dropping by.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 233,
+  "fields": {
+    "prompt": "I started a business making armor for fish.",
+    "response": "It is going swimmingly.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 234,
+  "fields": {
+    "prompt": "Why did the remote control feel powerful?",
+    "response": "It had all the right buttons.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 235,
+  "fields": {
+    "prompt": "I tried to tell a joke about a doorbell, but it did not ring true.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 236,
+  "fields": {
+    "prompt": "Why did the cucumber call a lawyer?",
+    "response": "It was in a pickle.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 237,
+  "fields": {
+    "prompt": "I asked the window how it was doing.",
+    "response": "It said it could see clearly now.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 238,
+  "fields": {
+    "prompt": "Why did the paintbrush get hired?",
+    "response": "It had a fine stroke of genius.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 239,
+  "fields": {
+    "prompt": "I tried to make a joke about batteries, but it had no charge.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 240,
+  "fields": {
+    "prompt": "Why did the hay bale start a podcast?",
+    "response": "It had a lot to straw about.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 241,
+  "fields": {
+    "prompt": "I opened a store that only sells hinges.",
+    "response": "Business is swinging open.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 242,
+  "fields": {
+    "prompt": "Why did the apple join the gym?",
+    "response": "It wanted a stronger core.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 243,
+  "fields": {
+    "prompt": "I tried to make a joke about a dictionary, but I could not define it.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 244,
+  "fields": {
+    "prompt": "Why did the envelope get promoted?",
+    "response": "It delivered every time.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 245,
+  "fields": {
+    "prompt": "I tried to make a joke about a fence, but I could not get over it.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 246,
+  "fields": {
+    "prompt": "Why did the orchestra hire a plumber?",
+    "response": "The pipes needed tuning.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 247,
+  "fields": {
+    "prompt": "I asked the salad why it looked so calm.",
+    "response": "It said it was dressing for success.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 248,
+  "fields": {
+    "prompt": "Why did the candle bring a suitcase?",
+    "response": "It was ready to travel light.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 249,
+  "fields": {
+    "prompt": "I tried to tell a joke about a mailbox, but it did not post well.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 250,
+  "fields": {
+    "prompt": "Why did the hammer get invited to the meeting?",
+    "response": "It always drove the point home.",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 251,
+  "fields": {
+    "prompt": "I bought a ladder because my goals were too high.",
+    "response": "",
+    "created_at": "2026-06-10T00:00:00.000Z"
+  }
+},
+{
+  "model": "jokes.joke",
+  "pk": 252,
+  "fields": {
+    "prompt": "Why did the compass get a thank-you note?",
+    "response": "It pointed everyone in the right direction.",
     "created_at": "2026-06-10T00:00:00.000Z"
   }
 }
